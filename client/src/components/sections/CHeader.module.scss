@@ -1,0 +1,166 @@
+@use '@/styles/variables' as vars;
+
+@use 'sass:color';
+
+
+$hover-color-transition: 0.2s ease;
+
+
+.header {
+    height: vars.$header-height;
+
+    // position: relative;
+    position: sticky;
+    isolation: isolate;
+    inset: 0 0 auto 0;
+    z-index: 10;
+
+    padding-block: 0px;
+
+    font: vars.$h6;
+
+    display: flex;
+    align-items: center;
+
+    background-color: vars.$primary-color;
+    fill: vars.$font-primary-color;
+}
+
+// .header:has(.acessos_content[aria-hidden="false"]) {
+//     position: sticky !important;
+// }
+
+.wrapper {
+    gap: 3em;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    transition: fill $hover-color-transition;
+
+    fill: inherit;
+}
+
+.logo:hover {
+    fill: vars.$secondary-color;
+}
+
+.acessos_links {
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.acessos_mobile {
+    .acessos_toggler {
+        cursor: pointer;
+        user-select: none;
+
+        display: inline-block;
+
+        transition: fill $hover-color-transition;
+    }
+
+    .acessos_toggler:hover {
+        fill: vars.$secondary-color;
+    }
+
+    .acessos_content {
+        width: 100%;
+        height: 100%;
+        background-color: hsla(
+            color.channel(vars.$background-menu-color, "hue", hsl),
+            color.channel(vars.$background-menu-color, "saturation", hsl),
+            color.channel(vars.$background-menu-color, "lightness", hsl),
+            70%
+        );
+
+        padding-inline: vars.$page-padding-inline;
+
+        position: fixed;
+        inset: vars.$header-height auto auto 100%;
+
+        transition: left 0.5s;
+    }
+
+    .acessos_content[aria-hidden="false"] {
+        left: 0;
+    }
+
+    .acessos_links {
+        width: 100%;
+        height: 60.8px;
+
+        font: vars.$h4;
+
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        color: vars.$font-secondary-color;
+
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+}
+
+.acessos_desktop {
+        gap: 4em;
+
+        display: flex !important;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        flex-direction: row;
+
+        background-color: transparent;
+
+    .acessos_links {
+        cursor: pointer;
+        user-select: none;
+    
+        position: relative;
+    
+        display: inline;
+    
+        color: vars.$font-primary-color;
+    
+        transition: color $hover-color-transition;
+    }
+
+    .acessos_links::before {
+        content: "";
+
+        width: 0;
+        height: 0.5px;
+
+        position: absolute;
+        inset: auto auto -3px 0;
+        z-index: 2;
+
+        display: block;
+
+        transition: width 0.2s ease-out;
+
+        background-color: vars.$font-primary-color;
+    }
+
+    .acessos_links:hover {
+        color: vars.$secondary-color;
+    }
+
+    .acessos_links:hover::before {
+        width: 100%;
+
+        background-color: vars.$secondary-color;
+    }
+}
+
+/*DESKTOP ONLY*/
+@media screen and (min-width: vars.$desktop-min-width) { 
+    .header {
+        --focus-color: vars.$font-primary-color;
+    }
+}
+/**************/

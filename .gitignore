@@ -1,0 +1,21 @@
+# Node.js & Build Artifacts
+**/node_modules/
+**/dist/
+**/.vite/
+**/src/generated/prisma/
+**/uploads/
+
+# Prisma & Databases
+*.db
+
+# Environment & Secrets
+*.env
+*.pem
+
+# Tooling Files
+*.http
+stats.html
+TODO*
+
+# OS Files
+.DS_Store

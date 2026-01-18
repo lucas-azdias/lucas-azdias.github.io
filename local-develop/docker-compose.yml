@@ -1,0 +1,25 @@
+# -----------------------------------
+# INSTRUÇÕES PARA USO LOCAL
+
+# Inicie o container e entre no modo interativo:
+# $ docker compose up -d; docker compose exec nodejs sh
+
+
+# Parar e remover container após uso:
+# $ docker container stop nodejs; docker container rm nodejs
+# -----------------------------------
+
+services:
+    nodejs:
+        image: docker.io/node:22-alpine
+        container_name: nodejs
+        volumes:
+            - ../client:/client
+        working_dir: /client
+        command: |
+            npm install -g bun
+            sh -c "tail -f /dev/null"
+        expose:
+            - 8080
+        ports:
+            - 8080:8080

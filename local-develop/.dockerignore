@@ -1,0 +1,9 @@
+# Ignore everything
+*
+
+# Except these folders
+!client
+!server
+
+# Ignore node modules
+**/node_modules/

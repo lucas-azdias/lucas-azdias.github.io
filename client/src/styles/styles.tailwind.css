@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+    font-family: "Inter", Helvetica, sans-serif;
+    --logo-back: oklch(0.00% 0.00 0.00);
+    --golden: oklch(84.94% 0.16 87.36);
+    --blue: oklch(0.60 0.22 257.46);
+}
