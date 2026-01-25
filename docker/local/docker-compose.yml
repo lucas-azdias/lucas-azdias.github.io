@@ -16,10 +16,8 @@ services:
         volumes:
             - ../client:/client
         working_dir: /client
-        command: |
-            npm install -g bun
-            sh -c "tail -f /dev/null"
-        expose:
-            - 8080
+        command: sh -c "tail -f /dev/null"
+        environment:
+            - CHOKIDAR_USEPOLLING=true
         ports:
             - 8080:8080
