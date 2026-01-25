@@ -10,6 +10,7 @@ export default {
     resolve: {
         alias: {
             "@": path.resolve(__dirname, "./src"),
+            "!": path.resolve(__dirname, "."),
         },
     },
     plugins: [
@@ -33,7 +34,11 @@ export default {
                 },
             }
         ),
-        svgr(),
+        svgr(
+            {
+                include: "**/*.svg?react",
+            }
+        ),
         tailwindcss(),
         visualizer(),
     ],

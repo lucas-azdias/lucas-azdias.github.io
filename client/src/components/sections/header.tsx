@@ -1,24 +1,64 @@
-import { Link } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
+import { Box, Link } from "@mui/joy";
 
-import LogoSVG from "!/public/assets/images/logo.svg"
+import LogoSVG from "!/public/assets/images/logo.svg?react";
 
-
-export function CHeader() {
+export function Header() {
     const pages = ["ferramentas", "contato", "sobre"];
-    const headerAcessosContent = pages.map((page, index) => (
-        <Link key={index} className="{styles.acessos_links}" to={page.toLowerCase()}>{page}</Link>
-    ))
 
     return (
-        <header className="{styles.header}">
-            <div className="{`wrapper ${styles.wrapper}`}">
-                <Link className="{styles.logo}" to="/">
-                    <LogoSVG className="{`img`}" height="20px" />
+        <Box
+            component="header"
+            sx={{
+                py: "15px",
+                backgroundColor: "primary.solidBg",
+                color: "primary.solidColor",
+            }}
+        >
+            <Box
+                sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    gap: "3em",
+                }}
+            >
+                <Link
+                    component={RouterLink}
+                    to="/"
+                    sx={{
+                        display: "flex",
+                        alignItems: "center",
+                    }}
+                >
+                    <LogoSVG height="20px" />
                 </Link>
-                <div className="{`desktop ${styles.acessos_desktop}`}">
-                    {headerAcessosContent}
-                </div>
-            </div>
-        </header>
+
+                <Box
+                    sx={{
+                        display: "flex",
+                        gap: "1.5em",
+                    }}
+                >
+                    {pages.map((page) => (
+                        <Link
+                            key={page}
+                            component={RouterLink}
+                            to={`/${page.toLowerCase()}`}
+                            sx={{
+                                color: "inherit",
+                                textDecoration: "none",
+                                fontSize: "sm",
+                                "&:hover": {
+                                    textDecoration: "underline",
+                                },
+                            }}
+                        >
+                            {page}
+                        </Link>
+                    ))}
+                </Box>
+            </Box>
+        </Box>
     );
 }
