@@ -62,7 +62,7 @@ export default function Webpage() {
                     </Typography>
 
                     {/* Mode toggle */}
-                    <Box sx={{ display: "flex", justifyContent: "flex-end", mb: 2 }}>
+                    <Box sx={{ display: "flex", justifyContent: "center", mb: 2 }}>
                         <ModeToggle />
                     </Box>
                 </Sheet>
