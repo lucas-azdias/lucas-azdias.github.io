@@ -7,7 +7,7 @@ import { router } from "@/router";
 
 function App() {
     return (
-        <CssVarsProvider>
+        <CssVarsProvider defaultMode="light">
             <CssBaseline />
             <GlobalStyles
                 styles={{
