@@ -14,7 +14,7 @@ services:
         image: docker.io/node:22-alpine
         container_name: nodejs
         volumes:
-            - ../client:/client
+            - ../../client:/client
         working_dir: /client
         command: sh -c "tail -f /dev/null"
         environment:

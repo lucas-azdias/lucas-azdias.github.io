@@ -11,12 +11,12 @@ function App() {
             <CssBaseline />
             <GlobalStyles
                 styles={{
-                // CSS object styles
+                    // CSS object styles
                     html: {
-                    // ...
+                        // ...
                     },
                     body: {
-                    // ...
+                        // ...
                     },
                 }}
             />

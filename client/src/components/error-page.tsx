@@ -1,5 +1,9 @@
-import { Button } from "@mui/joy";
-import { Link, useRouteError, isRouteErrorResponse } from "react-router-dom";
+import { Box, Typography, Button, Link } from "@mui/joy";
+import {
+    Link as RouterLink,
+    useRouteError,
+    isRouteErrorResponse,
+} from "react-router-dom";
 
 export function ErrorPage() {
     const error = useRouteError();
@@ -8,27 +12,54 @@ export function ErrorPage() {
     let message = "Ocorreu um erro inesperado. Por favor, tente novamente.";
 
     if (isRouteErrorResponse(error)) {
-        title = `Erro ${error.status.toString()}`;
+        title = `Erro ${error.status}`;
         message = error.statusText || message;
-    }
-    else if (error instanceof Error) {
+    } else if (error instanceof Error) {
         message = error.message;
     }
 
     return (
-        <div
-            className="w-[100dvw] h-[100dvh] flex justify-center items-center"
+        <Box
+            sx={{
+                width: "100dvw",
+                height: "100dvh",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+            }}
         >
-            <div className="flex flex-col flex-wrap items-center">
-                <h1 className="text-3xl text-center font-semibold text-600 mb-4">{title}</h1>
-                <p className="text-center text-gray-700 mb-6">{message}</p>
+            <Box
+                sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    maxWidth: 480,
+                    px: 2,
+                }}
+            >
+                <Typography
+                    level="h2"
+                    textAlign="center"
+                    sx={{ mb: 1.5 }}
+                >
+                    {title}
+                </Typography>
 
-                <Link to="/">
-                    <Button>
+                <Typography
+                    level="body-md"
+                    textAlign="center"
+                    textColor="neutral.600"
+                    sx={{ mb: 3 }}
+                >
+                    {message}
+                </Typography>
+
+                <Link component={RouterLink} to="/" underline="none">
+                    <Button variant="solid">
                         Ir para home
                     </Button>
                 </Link>
-            </div>
-        </div>
+            </Box>
+        </Box>
     );
 }

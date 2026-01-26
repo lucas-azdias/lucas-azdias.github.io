@@ -1,15 +1,53 @@
+import { Box } from "@mui/joy";
+
 export function Loading({ isFixed = false }: { isFixed?: boolean }) {
     return (
-        <div
-            className={`${isFixed ? "fixed inset-0" : "w-full h-full"} flex
-                justify-center items-center z-100 bg-background`}
+        <Box
+            sx={{
+                position: isFixed ? "fixed" : "relative",
+                inset: isFixed ? 0 : undefined,
+                width: isFixed ? "100vw" : "100%",
+                height: isFixed ? "100vh" : "100%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                zIndex: 100,
+                bgcolor: "background.body",
+            }}
         >
-            <div className="w-[32px] h-[32px] flex justify-center items-center">
-                <span
-                    className="w-[20px] h-[20px] inline-block rounded-full border-[3.5px] border-white/45
-                        border-b-transparent animate-spin animation-duration-[0.4s]"
+            <Box
+                sx={{
+                    width: 32,
+                    height: 32,
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                }}
+            >
+                <Box
+                    component="span"
+                    sx={{
+                        width: 20,
+                        height: 20,
+                        borderRadius: "50%",
+                        border: "3.5px solid",
+                        borderColor: "color-mix(in srgb, var(--joy-palette-neutral-solidBg) 65%, transparent)",
+                        borderBottomColor: "transparent",
+                        animation: "spin 0.4s linear infinite",
+                    }}
                 />
-            </div>
-        </div>
+            </Box>
+
+            {/* Keyframes can live here or in your global theme */}
+            <style>
+                {`
+                    @keyframes spin {
+                        to {
+                            transform: rotate(360deg);
+                        }
+                    }
+                `}
+            </style>
+        </Box>
     );
 }
