@@ -1,4 +1,5 @@
-import { extendTheme } from "@mui/joy";
+import { extendTheme, type Theme } from "@mui/joy";
+import { type GlobalStylesProps } from "@mui/system";
 import { type Mode } from "@mui/system/cssVars/useCurrentColorScheme";
 
 import "@/theme/fonts.css";
@@ -20,3 +21,10 @@ export const theme = extendTheme(
         },
     }
 );
+
+export const globalStyles: GlobalStylesProps<Theme>["styles"] = {
+    "::selection": {
+        backgroundColor: "var(--joy-palette-text-primary)",
+        color: "var(--joy-palette-background-surface)",
+    },
+};
