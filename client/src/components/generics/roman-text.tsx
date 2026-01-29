@@ -1,8 +1,10 @@
-import { Typography, type TypographyProps } from "@mui/joy";
+import { Typography, type TypographyProps, type Theme } from "@mui/joy";
+import { type SystemStyleObject } from "@mui/system";
 
-export interface RomanTextProps extends TypographyProps {
-    value: number;
-    counterName?: string;
+export interface RomanTextProps extends Omit<TypographyProps, "sx"> {
+    value: number
+    counterName?: string
+    sx?: SystemStyleObject<Theme>
 }
 
 export function RomanText(

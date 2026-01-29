@@ -1,6 +1,6 @@
 export interface Page {
-    label: string;
-    to: string;
+    label: string
+    to: string
 }
 
 // Central list of all pages

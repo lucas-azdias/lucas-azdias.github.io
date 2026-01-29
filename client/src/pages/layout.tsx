@@ -1,8 +1,8 @@
 import { Outlet } from "react-router-dom";
 import { Box, Sheet } from "@mui/joy";
 
-import { ModeToggle } from "@/components/mode-toggle";
-import { RomanText } from "@/components/roman-text";
+import { ModeToggle } from "@/components/generics/mode-toggle";
+import { RomanText } from "@/components/generics/roman-text";
 
 export default function LayoutPage() {
     return (
