@@ -38,7 +38,7 @@ export default function Webpage() {
                 sx={{
                     display: "flex",
                     flexDirection: "column",
-                    width: "500px",
+                    width: 520,
                     minHeight: "100dvh",
                     padding: 5,
                     paddingTop: 7,
