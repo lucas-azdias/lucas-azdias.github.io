@@ -8,15 +8,10 @@ import {
 export function ErrorPage() {
     const error = useRouteError();
 
-    let title = "Algo deu errado 😢";
-    let message = "Ocorreu um erro inesperado. Por favor, tente novamente.";
+    let title = "Ocorreu um erro inesperado";
 
     if (isRouteErrorResponse(error)) {
-        title = `Erro ${error.status.toString()}`;
-        message = error.statusText || message;
-    }
-    else if (error instanceof Error) {
-        message = error.message;
+        title = `Erro ${error.status}`;
     }
 
     return (
@@ -39,25 +34,20 @@ export function ErrorPage() {
                 }}
             >
                 <Typography
-                    level="h2"
+                    level="h3"
                     textAlign="center"
                     sx={{ mb: 1.5 }}
                 >
                     {title}
                 </Typography>
 
-                <Typography
-                    level="body-md"
-                    textAlign="center"
-                    textColor="neutral.600"
-                    sx={{ mb: 3 }}
-                >
-                    {message}
-                </Typography>
-
                 <Link component={RouterLink} to="/" underline="none">
-                    <Button variant="solid">
-                        Ir para home
+                    <Button
+                        variant="solid"
+                        color="neutral"
+                        sx={{ fontWeight: "normal" }}
+                    >
+                        Página inicial
                     </Button>
                 </Link>
             </Box>
