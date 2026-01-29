@@ -41,6 +41,7 @@ export default function Webpage() {
                     width: "500px",
                     minHeight: "100dvh",
                     padding: 5,
+                    paddingTop: 7,
                     textAlign: "center",
 
                     borderInline: "2px solid",
@@ -52,14 +53,14 @@ export default function Webpage() {
                 }}
             >
                 {/* Title */}
-                <Typography level="h1" sx={{ mt: 4, lineHeight: 1 }}>
+                <Typography level="h1" sx={{ lineHeight: 1 }}>
                     Lucas
                     <br />
                     Dias
                 </Typography>
 
                 {/* Subtitle */}
-                <Typography level="h3" sx={{ mt: 3, lineHeight: 1.2 }}>
+                <Typography level="h3" sx={{ mt: 3 }}>
                     Desenvolvedor
                 </Typography>
 
@@ -90,6 +91,7 @@ export default function Webpage() {
                         >
                             {[
                                 { label: "SOBRE", to: "/sobre" },
+                                { label: "FERRAMENTAS", to: "/ferramentas" },
                                 { label: "PROJETOS", to: "/projetos" },
                                 { label: "ARTIGOS", to: "/artigos" },
                                 { label: "ARQUIVOS", to: "/arquivos" },
@@ -180,8 +182,8 @@ export default function Webpage() {
                     </Typography>
 
                     {/* Mode toggle */}
-                    <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
-                        <ModeToggle size="lg" sx={{ fontSize: "1.4rem" }} />
+                    <Box sx={{ display: "flex", justifyContent: "center", mt: 1 }}>
+                        <ModeToggle size="sm" sx={{ fontSize: "1.4rem" }} />
                     </Box>
                 </Box>
             </Box>
