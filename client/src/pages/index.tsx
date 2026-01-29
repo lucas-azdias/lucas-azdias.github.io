@@ -1,6 +1,8 @@
 import { Box, Typography, Link, List, ListItem } from "@mui/joy";
 import { Link as RouterLink } from "react-router";
 
+import { PAGES } from "@/constants/pages";
+
 export default function Webpage() {
     return (
         <>
@@ -33,13 +35,7 @@ export default function Webpage() {
                         p: 0,
                     }}
                 >
-                    {[
-                        { label: "SOBRE", to: "/sobre" },
-                        { label: "FERRAMENTAS", to: "/ferramentas" },
-                        { label: "PROJETOS", to: "/projetos" },
-                        { label: "ARTIGOS", to: "/artigos" },
-                        { label: "ARQUIVOS", to: "/arquivos" },
-                    ].map(item => (
+                    {PAGES.map(item => (
                         <Link
                             key={item.label}
                             typography="body-md"
