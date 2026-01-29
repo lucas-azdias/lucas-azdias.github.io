@@ -1,5 +1,5 @@
-import { useLocation } from "react-router-dom";
-import { Box, Typography } from "@mui/joy";
+import { useLocation, Link as RouterLink } from "react-router-dom";
+import { Box, Link, Typography } from "@mui/joy";
 
 import { PAGES } from "@/constants/pages";
 import { RomanText } from "@/components/generics/roman-text";
@@ -18,7 +18,18 @@ export function ChapterHeader() {
                     justifyContent: "space-between",
                 }}
             >
-                {currentPage?.label ?? ""}
+                <Link
+                    component={RouterLink}
+                    to={"/"}
+                    typography="body-md"
+                    underline="hover"
+                    sx={{
+                        textDecorationStyle: "solid",
+                        textDecorationColor: "currentColor",
+                    }}
+                >
+                    {currentPage?.label ?? ""}
+                </Link>
 
                 <Box
                     sx={{
