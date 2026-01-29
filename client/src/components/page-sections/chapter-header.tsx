@@ -1,5 +1,5 @@
-import { useLocation, Link as RouterLink } from "react-router-dom";
-import { Box, Link, Typography } from "@mui/joy";
+import { useLocation } from "react-router-dom";
+import { Box, Typography } from "@mui/joy";
 
 import { PAGES } from "@/constants/pages";
 import { RomanText } from "@/components/generics/roman-text";
@@ -7,7 +7,6 @@ import { RomanText } from "@/components/generics/roman-text";
 export function ChapterHeader() {
     const location = useLocation();
     const pagePaths = PAGES.map(page => page.to);
-    const currentPage = PAGES.find(page => page.to === location.pathname);
 
     return (
         <Typography level="body-lg" fontWeight="bold">
@@ -16,20 +15,12 @@ export function ChapterHeader() {
                     display: "flex",
                     flexDirection: "row",
                     justifyContent: "space-between",
+                    mb: 5,
                 }}
             >
-                <Link
-                    component={RouterLink}
-                    to={"/"}
-                    typography="body-md"
-                    underline="hover"
-                    sx={{
-                        textDecorationStyle: "solid",
-                        textDecorationColor: "currentColor",
-                    }}
-                >
-                    {currentPage?.label ?? ""}
-                </Link>
+                <RomanText
+                    value={new Date().getFullYear()}
+                />
 
                 <Box
                     sx={{
