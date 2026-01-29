@@ -11,7 +11,7 @@ export default function Webpage() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                height: "100%",
+                minHeight: "100dvh",
                 px: 2,
             }}
         >
@@ -39,7 +39,7 @@ export default function Webpage() {
                     display: "flex",
                     flexDirection: "column",
                     width: "500px",
-                    height: "100%",
+                    minHeight: "100dvh",
                     padding: 5,
                     textAlign: "center",
 
@@ -52,10 +52,10 @@ export default function Webpage() {
                 }}
             >
                 {/* Title */}
-                <Typography level="h1" sx={{ mt: 4, fontSize: "5rem", lineHeight: 1 }}>
-                    LUCAS
+                <Typography level="h1" sx={{ mt: 4, lineHeight: 1 }}>
+                    Lucas
                     <br />
-                    DIAS
+                    Dias
                 </Typography>
 
                 {/* Subtitle */}
@@ -92,16 +92,6 @@ export default function Webpage() {
                                 { label: "SOBRE", to: "/sobre" },
                                 { label: "PROJETOS", to: "/projetos" },
                                 { label: "ARTIGOS", to: "/artigos" },
-                                { label: "ARQUIVOS", to: "/arquivos" },
-                                { label: "ARQUIVOS", to: "/arquivos" },
-                                { label: "ARQUIVOS", to: "/arquivos" },
-                                { label: "ARQUIVOS", to: "/arquivos" },
-                                { label: "ARQUIVOS", to: "/arquivos" },
-                                { label: "ARQUIVOS", to: "/arquivos" },
-                                { label: "ARQUIVOS", to: "/arquivos" },
-                                { label: "ARQUIVOS", to: "/arquivos" },
-                                { label: "ARQUIVOS", to: "/arquivos" },
-                                { label: "ARQUIVOS", to: "/arquivos" },
                                 { label: "ARQUIVOS", to: "/arquivos" },
                             ].map(item => (
                                 <Link
