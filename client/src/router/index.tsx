@@ -88,13 +88,17 @@ function buildRoutes(node: PagePathNode): RouteObject {
         path: node.path || undefined,
         element: node.element,
         children: children.length > 0 ? children : undefined,
-        errorElement: <ErrorPage />,
     };
 
     return route;
 }
 
 // Create the routes and export for use with RouterProvider
-const routes = [buildRoutes(pagePathsTree)];
+const routes: RouteObject[] = [
+    {
+        ...buildRoutes(pagePathsTree),
+        errorElement: <ErrorPage />,
+    }
+];
 
 export const router = createBrowserRouter(routes);
