@@ -11,7 +11,7 @@ export function ErrorPage() {
     let title = "Ocorreu um erro inesperado";
 
     if (isRouteErrorResponse(error)) {
-        title = `Erro ${error.status}`;
+        title = `Erro ${error.status.toString()}`;
     }
 
     return (

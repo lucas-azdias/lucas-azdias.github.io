@@ -1,192 +1,113 @@
-import { Box, Typography, Sheet, Link, List, ListItem } from "@mui/joy";
+import { Box, Typography, Link, List, ListItem } from "@mui/joy";
 import { Link as RouterLink } from "react-router";
-
-import { ModeToggle } from "@/components/mode-toggle";
 
 export default function Webpage() {
     return (
-        <Sheet
-            variant="plain"
-            sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                minHeight: "100dvh",
-                px: 2,
-            }}
-        >
-            <Box
-                sx={theme => ({
-                    position: "fixed",
-                    width: "100dvh",
-                    height: "100dvh",
-                    borderRadius: "50%",
-                    background:
-                        theme.palette.mode === "light"
-                            ? "none"
-                            : "radial-gradient(circle, rgba(69, 69, 69, 0.35), transparent 70%)",
-                    filter: "blur(40px)",
-                    top: 0,
-                    left: "50%",
-                    transform: "translateX(-50%)",
-                    zIndex: 0,
-                    pointerEvents: "none",
-                })}
-            />
+        <>
+            {/* Title */}
+            <Typography level="h1" sx={{ lineHeight: 1 }}>
+                Lucas
+                <br />
+                Dias
+            </Typography>
 
+            {/* Subtitle */}
+            <Typography level="h3" sx={{ mt: 3 }}>
+                Desenvolvedor
+            </Typography>
+
+            {/* Book summary */}
             <Box
                 sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    width: 520,
-                    minHeight: "100dvh",
-                    padding: 5,
-                    paddingTop: 7,
-                    textAlign: "center",
-
-                    borderInline: "2px solid",
-                    borderColor: "neutral.outlinedBorder",
-                    transition: "border-color ease-out 0.2s",
-                    "&:hover": {
-                        borderColor: "neutral.solidBg",
-                    },
+                    paddingTop: 3,
+                    paddingBottom: 4,
                 }}
             >
-                {/* Title */}
-                <Typography level="h1" sx={{ lineHeight: 1 }}>
-                    Lucas
-                    <br />
-                    Dias
-                </Typography>
-
-                {/* Subtitle */}
-                <Typography level="h3" sx={{ mt: 3 }}>
-                    Desenvolvedor
-                </Typography>
-
-                {/* Content */}
-                <Box
+                <List
+                    component="ol"
+                    marker="none"
                     sx={{
-                        display: "flex",
-                        flexDirection: "column",
-                        flex: 1,
-                        paddingTop: 3,
+                        display: "grid",
+                        gap: 1,
+                        counterReset: "counter",
+                        p: 0,
                     }}
                 >
-                    {/* Book summary */}
-                    <Box
-                        sx={{
-                            paddingBottom: 4,
-                        }}
-                    >
-                        <List
-                            component="ol"
-                            marker="none"
+                    {[
+                        { label: "SOBRE", to: "/sobre" },
+                        { label: "FERRAMENTAS", to: "/ferramentas" },
+                        { label: "PROJETOS", to: "/projetos" },
+                        { label: "ARTIGOS", to: "/artigos" },
+                        { label: "ARQUIVOS", to: "/arquivos" },
+                    ].map(item => (
+                        <Link
+                            key={item.label}
+                            typography="body-md"
+                            component={RouterLink}
+                            to={item.to}
+                            underline="none"
+                            color="neutral"
                             sx={{
-                                display: "grid",
-                                gap: 1,
-                                counterReset: "counter",
-                                p: 0,
+                                position: "relative",
+                                color: "neutral.plainColor",
+                                fontWeight: "bold",
+
+                                "&::after": {
+                                    content: "\"\"",
+                                    position: "absolute",
+                                    left: 0,
+                                    bottom: -2,
+                                    width: "0",
+                                    height: "1px",
+                                    backgroundColor: "currentColor",
+                                    transition: "width ease-out 0.15s",
+                                },
+
+                                "&:hover": {
+
+                                    "&::after": {
+                                        width: "100%",
+                                    },
+                                },
                             }}
                         >
-                            {[
-                                { label: "SOBRE", to: "/sobre" },
-                                { label: "FERRAMENTAS", to: "/ferramentas" },
-                                { label: "PROJETOS", to: "/projetos" },
-                                { label: "ARTIGOS", to: "/artigos" },
-                                { label: "ARQUIVOS", to: "/arquivos" },
-                            ].map(item => (
-                                <Link
-                                    key={item.label}
-                                    typography="body-md"
-                                    component={RouterLink}
-                                    to={item.to}
-                                    underline="none"
-                                    color="neutral"
-                                    sx={{
-                                        position: "relative",
-                                        color: "neutral.plainColor",
-                                        fontWeight: "bold",
+                            <ListItem
+                                key={item.label}
+                                sx={{
+                                    display: "flex",
+                                    alignItems: "end",
+                                    counterIncrement: "counter",
+                                    py: 0.5,
+                                    gap: 0.4,
+                                    flex: 1,
+                                    height: "100%",
 
-                                        "&::after": {
-                                            content: "\"\"",
-                                            position: "absolute",
-                                            left: 0,
-                                            bottom: -2,
-                                            width: "0",
-                                            height: "1px",
-                                            backgroundColor: "currentColor",
-                                            transition: "width ease-out 0.15s",
-                                        },
+                                    "&::before": {
+                                        content: "\"\"",
+                                        flex: 1,
+                                        order: 2,
+                                        mx: 1,
+                                        height: "100%",
 
-                                        "&:hover": {
+                                        backgroundRepeat: "space no-repeat",
+                                        backgroundImage:
+                                            "radial-gradient(circle, currentColor 20%, transparent 21%)",
+                                        backgroundSize: ".6em .6em",
+                                        backgroundPosition: "0 70%",
+                                    },
 
-                                            "&::after": {
-                                                width: "100%",
-                                            },
-                                        },
-                                    }}
-                                >
-                                    <ListItem
-                                        key={item.label}
-                                        sx={{
-                                            display: "flex",
-                                            alignItems: "end",
-                                            counterIncrement: "counter",
-                                            py: 0.5,
-                                            gap: 0.4,
-                                            flex: 1,
-                                            height: "100%",
-
-                                            "&::before": {
-                                                content: "\"\"",
-                                                flex: 1,
-                                                order: 2,
-                                                mx: 1,
-                                                height: "100%",
-
-                                                backgroundRepeat: "space no-repeat",
-                                                backgroundImage:
-                                                    "radial-gradient(circle, currentColor 20%, transparent 21%)",
-                                                backgroundSize: ".6em .6em",
-                                                backgroundPosition: "0 70%",
-                                            },
-
-                                            "&::after": {
-                                                content: "counter(counter, upper-roman)",
-                                                order: 3,
-                                            },
-                                        }}
-                                    >
-                                        {item.label}
-                                    </ListItem>
-                                </Link>
-                            ))}
-                        </List>
-                    </Box>
-
-                    {/* Footer */}
-                    <Typography
-                        level="body-md"
-                        sx={{
-                            marginTop: "auto",
-                            counterSet: `year ${new Date().getFullYear().toString()}`,
-
-                            "&::after": {
-                                content: "counter(year, upper-roman)",
-                                fontWeight: "bold",
-                            },
-                        }}
-                    >
-                        <b>v. </b>
-                    </Typography>
-
-                    {/* Mode toggle */}
-                    <Box sx={{ display: "flex", justifyContent: "center", mt: 1 }}>
-                        <ModeToggle size="sm" sx={{ fontSize: "1.4rem" }} />
-                    </Box>
-                </Box>
+                                    "&::after": {
+                                        content: "counter(counter, upper-roman)",
+                                        order: 3,
+                                    },
+                                }}
+                            >
+                                {item.label}
+                            </ListItem>
+                        </Link>
+                    ))}
+                </List>
             </Box>
-        </Sheet>
+        </>
     );
 }
