@@ -17,6 +17,7 @@ export function ChapterTitle() {
                 display: "inline-block",
                 textDecorationStyle: "solid",
                 textDecorationColor: "currentColor",
+                mb: 8,
             }}
         >
             {currentPage?.label ?? ""}

@@ -6,14 +6,14 @@ export default function Webpage() {
     return (
         <>
             {/* Title */}
-            <Typography level="h1" sx={{ lineHeight: 1 }}>
+            <Typography level="h1" sx={{ lineHeight: 1, mb: 2 }}>
                 Lucas
                 <br />
                 Dias
             </Typography>
 
             {/* Subtitle */}
-            <Typography level="h3" sx={{ mt: 3 }}>
+            <Typography level="h4" sx={{ mb: 2 }}>
                 Desenvolvedor
             </Typography>
 

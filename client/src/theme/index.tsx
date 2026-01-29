@@ -14,15 +14,23 @@ export const theme = extendTheme(
             code: "\"Source Code Pro\", monospace",
         },
         typography: {
-            h1: { fontSize: "6rem", fontWeight: 400 },
-            h2: { fontSize: "3.8rem", fontWeight: 400 },
-            h3: { fontSize: "2.5rem", fontWeight: 400 },
-            h4: { fontSize: "1.5rem", fontWeight: 400 },
+            // Perfect Fourth (1.333)
+            h1: { fontSize: "4.20rem", fontWeight: 400 },
+            h2: { fontSize: "3.15rem", fontWeight: 400 },
+            h3: { fontSize: "2.36rem", fontWeight: 400 },
+            h4: { fontSize: "1.77rem", fontWeight: 400 },
+            "body-lg": { fontSize: "1.33rem", color: "var(--joy-palette-text-primary)" },
+            "body-md": { color: "var(--joy-palette-text-primary)" },
+            "body-sm": { color: "var(--joy-palette-text-primary)" },
+            "body-xs": { color: "var(--joy-palette-text-primary)" },
         },
     }
 );
 
 export const globalStyles: GlobalStylesProps<Theme>["styles"] = {
+    html: {
+        fontSize: "18px",
+    },
     "::selection": {
         backgroundColor: "var(--joy-palette-text-primary)",
         color: "var(--joy-palette-background-surface)",

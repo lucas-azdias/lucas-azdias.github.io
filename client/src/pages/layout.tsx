@@ -57,9 +57,9 @@ export default function Layout() {
 
                 {/* Footer text */}
                 <Typography
-                    level="body-md"
-                    fontWeight="bold"
+                    level="body-sm"
                     sx={{
+                        paddingTop: 3,
                         marginTop: "auto",
                     }}
                 >

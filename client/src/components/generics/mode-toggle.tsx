@@ -26,7 +26,7 @@ export function ModeToggle(
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    fontSize: "1.4rem"
+                    fontSize: "1.1rem"
                 }}
             >
                 {mode === "light" ? <MdLightMode /> : <MdDarkMode />}

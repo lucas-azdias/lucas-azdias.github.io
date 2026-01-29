@@ -7,8 +7,7 @@ export function BookSummary() {
     return (
         <Box
             sx={{
-                paddingTop: 3,
-                paddingBottom: 4,
+                paddingBottom: 2,
             }}
         >
             <List
@@ -16,7 +15,7 @@ export function BookSummary() {
                 marker="none"
                 sx={{
                     display: "grid",
-                    gap: 1,
+                    gap: 0.5,
                     counterReset: "counter",
                     p: 0,
                 }}
@@ -59,7 +58,6 @@ export function BookSummary() {
                         >
                             <Typography
                                 level="body-md"
-                                fontWeight="bold"
                                 sx={{
                                     display: "flex",
                                     alignItems: "end",

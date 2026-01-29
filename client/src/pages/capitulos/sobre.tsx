@@ -1,9 +1,11 @@
-import { BookSummary } from "@/components/page-elements/book-summary";
+import { Typography } from "@mui/joy";
 
 export default function Webpage() {
     return (
         <>
-            <BookSummary />
+            <Typography level="body-md" textAlign="left">
+                Olá, meu nome é Lucas Dias.
+            </Typography>
         </>
     );
 }
