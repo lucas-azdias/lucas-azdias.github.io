@@ -1,5 +1,5 @@
-import { Box, Link, List, ListItem } from "@mui/joy";
-import { Link as RouterLink } from "react-router";
+import { Box, Link, List, ListItem, Typography } from "@mui/joy";
+import { Link as RouterLink } from "react-router-dom";
 
 import { PAGES } from "@/constants/pages";
 
@@ -28,19 +28,14 @@ export function BookSummary() {
                         component={RouterLink}
                         to={item.to}
                         underline="none"
-                        color="neutral"
                         sx={{
-                            position: "relative",
-                            color: "neutral.plainColor",
-                            fontWeight: "bold",
-
                             "&::after": {
                                 content: "\"\"",
                                 position: "absolute",
                                 left: 0,
                                 bottom: -2,
-                                width: "0",
-                                height: "1px",
+                                width: 0,
+                                height: 2,
                                 backgroundColor: "currentColor",
                                 transition: "width ease-out 0.15s",
                             },
@@ -57,34 +52,45 @@ export function BookSummary() {
                             key={item.label}
                             sx={{
                                 display: "flex",
-                                alignItems: "end",
-                                counterIncrement: "counter",
-                                py: 0.5,
-                                gap: 0.4,
                                 flex: 1,
                                 height: "100%",
-
-                                "&::before": {
-                                    content: "\"\"",
-                                    flex: 1,
-                                    order: 2,
-                                    mx: 1,
-                                    height: "100%",
-
-                                    backgroundRepeat: "space no-repeat",
-                                    backgroundImage:
-                                        "radial-gradient(circle, currentColor 20%, transparent 21%)",
-                                    backgroundSize: ".6em .6em",
-                                    backgroundPosition: "0 70%",
-                                },
-
-                                "&::after": {
-                                    content: "counter(counter, upper-roman)",
-                                    order: 3,
-                                },
+                                paddingX: 0,
                             }}
                         >
-                            {item.label}
+                            <Typography
+                                level="body-md"
+                                fontWeight="bold"
+                                sx={{
+                                    display: "flex",
+                                    alignItems: "end",
+                                    counterIncrement: "counter",
+                                    py: 0.5,
+                                    gap: 0.4,
+                                    flex: 1,
+                                    height: "100%",
+
+                                    "&::before": {
+                                        content: "\"\"",
+                                        flex: 1,
+                                        order: 2,
+                                        mx: 1,
+                                        height: "100%",
+
+                                        backgroundRepeat: "space no-repeat",
+                                        backgroundImage:
+                                            "radial-gradient(circle, currentColor 20%, transparent 21%)",
+                                        backgroundSize: ".6em .6em",
+                                        backgroundPosition: "0 70%",
+                                    },
+
+                                    "&::after": {
+                                        content: "counter(counter, upper-roman)",
+                                        order: 3,
+                                    },
+                                }}
+                            >
+                                {item.label}
+                            </Typography>
                         </ListItem>
                     </Link>
                 ))}

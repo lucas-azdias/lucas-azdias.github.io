@@ -1,4 +1,4 @@
-import { IconButton, useColorScheme, type IconButtonProps } from "@mui/joy";
+import { IconButton, Typography, useColorScheme, type IconButtonProps } from "@mui/joy";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 export function ModeToggle(
@@ -21,7 +21,9 @@ export function ModeToggle(
             }}
             {...props}
         >
-            {mode === "light" ? <MdLightMode /> : <MdDarkMode />}
+            <Typography sx={{ fontSize: "1.4rem" }}>
+                {mode === "light" ? <MdLightMode /> : <MdDarkMode />}
+            </Typography>
         </IconButton>
     );
 }

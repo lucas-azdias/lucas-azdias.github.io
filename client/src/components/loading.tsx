@@ -38,7 +38,6 @@ export function Loading({ isFixed = false }: { isFixed?: boolean }) {
                 />
             </Box>
 
-            {/* Keyframes can live here or in your global theme */}
             <style>
                 {`
                     @keyframes spin {

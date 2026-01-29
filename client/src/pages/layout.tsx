@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
-import { Box, Sheet } from "@mui/joy";
+import { Box, Sheet, Typography } from "@mui/joy";
 
 import { ModeToggle } from "@/components/generics/mode-toggle";
 import { RomanText } from "@/components/generics/roman-text";
 
-export default function LayoutPage() {
+export default function Layout() {
     return (
         <Sheet
             variant="plain"
@@ -43,6 +43,7 @@ export default function LayoutPage() {
                     padding: 5,
                     paddingTop: 7,
                     textAlign: "center",
+                    zIndex: 1,
 
                     borderInline: "2px solid",
                     borderColor: "neutral.outlinedBorder",
@@ -55,18 +56,23 @@ export default function LayoutPage() {
                 <Outlet />
 
                 {/* Footer text */}
-                <RomanText
-                    value={new Date().getFullYear()}
+                <Typography
+                    level="body-md"
+                    fontWeight="bold"
                     sx={{
                         marginTop: "auto",
                     }}
                 >
-                    <b>v. </b>
-                </RomanText>
+                    <RomanText
+                        value={new Date().getFullYear()}
+                    >
+                        <b>v. </b>
+                    </RomanText>
+                </Typography>
 
                 {/* Mode toggle */}
                 <Box sx={{ display: "flex", justifyContent: "center", mt: 1 }}>
-                    <ModeToggle size="sm" sx={{ fontSize: "1.4rem" }} />
+                    <ModeToggle size="sm" />
                 </Box>
             </Box>
         </Sheet>

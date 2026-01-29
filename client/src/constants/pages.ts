@@ -5,9 +5,9 @@ export interface Page {
 
 // Central list of all pages
 export const PAGES: Page[] = [
-    { label: "SOBRE", to: "/sobre" },
-    { label: "FERRAMENTAS", to: "/ferramentas" },
-    { label: "PROJETOS", to: "/projetos" },
-    { label: "ARTIGOS", to: "/artigos" },
-    { label: "ARQUIVOS", to: "/arquivos" },
+    { label: "SOBRE", to: "/capitulos/sobre" },
+    { label: "FERRAMENTAS", to: "/capitulos/ferramentas" },
+    { label: "PROJETOS", to: "/capitulos/projetos" },
+    { label: "ARTIGOS", to: "/capitulos/artigos" },
+    { label: "ARQUIVOS", to: "/capitulos/arquivos" },
 ];

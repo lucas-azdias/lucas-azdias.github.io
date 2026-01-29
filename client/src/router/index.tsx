@@ -98,7 +98,7 @@ const routes: RouteObject[] = [
     {
         ...buildRoutes(pagePathsTree),
         errorElement: <ErrorPage />,
-    }
+    },
 ];
 
 export const router = createBrowserRouter(routes);
