@@ -132,6 +132,11 @@ export default [
                     ignoreUrls: true,
                 },
             ],
+            "@stylistic/quote-props": [
+                // Enforce quotes around keywords in objects
+                "error",
+                "as-needed",
+            ],
         },
     },
 ] as Linter.Config[];

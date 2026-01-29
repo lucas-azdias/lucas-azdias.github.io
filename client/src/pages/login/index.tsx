@@ -49,16 +49,16 @@ export default function Webpage() {
                     <Box
                         component="main"
                         sx={{
-                            "my": "auto",
-                            "px": 6,
-                            "py": 7,
-                            "display": "flex",
-                            "flexDirection": "column",
-                            "gap": 2,
-                            "width": 400,
-                            "maxWidth": "100%",
-                            "mx": "auto",
-                            "borderRadius": "sm",
+                            my: "auto",
+                            px: 6,
+                            py: 7,
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: 2,
+                            width: 400,
+                            maxWidth: "100%",
+                            mx: "auto",
+                            borderRadius: "sm",
                             "& form": {
                                 display: "flex",
                                 flexDirection: "column",
@@ -67,9 +67,9 @@ export default function Webpage() {
                             ["& .MuiFormLabel-asterisk"]: {
                                 visibility: "hidden",
                             },
-                            "border": "1px solid",
-                            "borderColor": "neutral.outlinedBorder",
-                            "backgroundColor": "rgba(255 255 255)",
+                            border: "1px solid",
+                            borderColor: "neutral.outlinedBorder",
+                            backgroundColor: "rgba(255 255 255)",
                         }}
                     >
                         <Stack sx={{ gap: 4, mb: 2 }}>

@@ -4,10 +4,11 @@ import { CssVarsProvider, CssBaseline, GlobalStyles } from "@mui/joy";
 
 import { Loading } from "@/components/loading";
 import { router } from "@/router";
+import { theme, defaultMode } from "@/theme";
 
 function App() {
     return (
-        <CssVarsProvider defaultMode="light">
+        <CssVarsProvider theme={theme} defaultMode={defaultMode}>
             <CssBaseline />
             <GlobalStyles
                 styles={{

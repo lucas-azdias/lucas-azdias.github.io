@@ -3,8 +3,6 @@ import { createRoot } from "react-dom/client";
 
 import App from "@/app";
 
-import "@fontsource/inter/index.css";
-
 // Development tools
 if (import.meta.env.DEV) {
     // Enable React Scan

@@ -12,9 +12,10 @@ export function ErrorPage() {
     let message = "Ocorreu um erro inesperado. Por favor, tente novamente.";
 
     if (isRouteErrorResponse(error)) {
-        title = `Erro ${error.status}`;
+        title = `Erro ${error.status.toString()}`;
         message = error.statusText || message;
-    } else if (error instanceof Error) {
+    }
+    else if (error instanceof Error) {
         message = error.message;
     }
 
