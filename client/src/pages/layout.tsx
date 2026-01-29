@@ -1,7 +1,8 @@
 import { Outlet } from "react-router-dom";
-import { Box, Sheet, Typography } from "@mui/joy";
+import { Box, Sheet } from "@mui/joy";
 
 import { ModeToggle } from "@/components/mode-toggle";
+import { RomanText } from "@/components/roman-text";
 
 export default function LayoutPage() {
     return (
@@ -54,20 +55,14 @@ export default function LayoutPage() {
                 <Outlet />
 
                 {/* Footer text */}
-                <Typography
-                    level="body-md"
+                <RomanText
+                    value={new Date().getFullYear()}
                     sx={{
                         marginTop: "auto",
-                        counterSet: `year ${new Date().getFullYear().toString()}`,
-
-                        "&::after": {
-                            content: "counter(year, upper-roman)",
-                            fontWeight: "bold",
-                        },
                     }}
                 >
                     <b>v. </b>
-                </Typography>
+                </RomanText>
 
                 {/* Mode toggle */}
                 <Box sx={{ display: "flex", justifyContent: "center", mt: 1 }}>

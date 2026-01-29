@@ -11,15 +11,15 @@ export function ModeToggle(
 
     return (
         <IconButton
-            {...props}
             variant="plain"
             onClick={(event) => {
-                // 1. Call consumer handler if provided
-                onClick?.(event);
-
-                // 2. Toggle color mode
+                // 1. Toggle color mode
                 setMode(mode === "light" ? "dark" : "light");
+
+                // 2. Call consumer handler if provided
+                onClick?.(event);
             }}
+            {...props}
         >
             {mode === "light" ? <MdLightMode /> : <MdDarkMode />}
         </IconButton>
