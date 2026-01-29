@@ -10,20 +10,20 @@ export function ModeToggle(
     const { mode, setMode } = useColorScheme();
 
     return (
-        <IconButton
-            variant="plain"
-            onClick={(event) => {
-                // 1. Toggle color mode
-                setMode(mode === "light" ? "dark" : "light");
+        <Typography sx={{ fontSize: "1.4rem" }}>
+            <IconButton
+                variant="plain"
+                onClick={(event) => {
+                    // 1. Toggle color mode
+                    setMode(mode === "light" ? "dark" : "light");
 
-                // 2. Call consumer handler if provided
-                onClick?.(event);
-            }}
-            {...props}
-        >
-            <Typography sx={{ fontSize: "1.4rem" }}>
+                    // 2. Call consumer handler if provided
+                    onClick?.(event);
+                }}
+                {...props}
+            >
                 {mode === "light" ? <MdLightMode /> : <MdDarkMode />}
-            </Typography>
-        </IconButton>
+            </IconButton>
+        </Typography>
     );
 }
