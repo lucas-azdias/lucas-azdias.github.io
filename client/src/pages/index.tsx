@@ -1,6 +1,6 @@
 import { Typography } from "@mui/joy";
 
-import { BookSummary } from "@/components/page-elements/book-summary";
+import { BookSummary } from "@/components/page-sections/book-summary";
 
 export default function Webpage() {
     return (

@@ -10,7 +10,7 @@ export function ChapterTitle() {
     return (
         <Link
             component={RouterLink}
-            to={"/"}
+            to="/"
             typography="h2"
             underline="hover"
             sx={{
