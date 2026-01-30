@@ -4,7 +4,7 @@
     "description": "My humble personal page.",
     "author": "Lucas Dias",
     "homepage": "https://azdias.com.br",
-    "license": "UNLICENSED",
+    "license": "MIT",
     "private": true,
     "main": "main.tsx",
     "type": "module",

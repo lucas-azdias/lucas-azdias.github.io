@@ -5,7 +5,7 @@ import { visualizer } from "rollup-plugin-visualizer";
 import { type UserConfig } from "vite";
 
 export default {
-    base: "./",
+    base: "/",
     resolve: {
         alias: {
             "@": path.resolve(__dirname, "./src"),
