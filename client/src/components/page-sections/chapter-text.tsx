@@ -1,41 +1,25 @@
+import { type ReactNode } from "react";
 import { Typography } from "@mui/joy";
 
 interface ChapterTextProps {
-    children: string
+    children: ReactNode
 }
 
 export function ChapterText({ children }: ChapterTextProps) {
-    const firstLetter = children[0];
-    const rest = children.slice(1);
-
     return (
         <Typography
-            component="div"
+            level="body-md"
             textAlign="left"
-            sx={{ display: "flex", alignItems: "baseline", gap: 1 }}
-        >
-            {/* First letter */}
-            <Typography
-                component="span"
-                level="h2"
-                sx={{
-                    lineHeight: 1,
+            sx={{
+                "&::first-letter": {
                     textTransform: "capitalize",
-                }}
-            >
-                {firstLetter}
-            </Typography>
-
-            {/* Rest of the text */}
-            <Typography
-                component="span"
-                level="body-md"
-                sx={{
-                    lineHeight: 1.2,
-                }}
-            >
-                {rest}
-            </Typography>
+                    fontSize: "var(--joy-fontSize-xl2)",
+                    fontFamily: "var(--joy-fontFamily-display)",
+                    lineHeight: 1,
+                },
+            }}
+        >
+            {children}
         </Typography>
     );
 }
