@@ -14,15 +14,15 @@ export const theme = extendTheme(
             code: "\"Source Code Pro\", monospace",
         },
         fontSize: {
-            // Perfect Fourth (1.333)
+            // Perfect Fourth (1.333) - 16px
             xl4: "4.20rem",
             xl3: "3.15rem",
             xl2: "2.36rem",
             xl: "1.77rem",
             lg: "1.33rem",
             md: "1rem",
-            sm: "0.875rem",
-            xs: "0.75rem",
+            sm: "0.85rem",
+            xs: "0.60rem",
         },
         typography: {
             h1: { fontWeight: 400 },

@@ -13,7 +13,7 @@ export default function Webpage() {
             </Typography>
 
             {/* Subtitle */}
-            <Typography level="h4" sx={{ mb: 2 }}>
+            <Typography level="h4" sx={{ mb: 4 }}>
                 Desenvolvedor
             </Typography>
 
