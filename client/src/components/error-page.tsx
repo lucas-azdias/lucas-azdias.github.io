@@ -1,9 +1,10 @@
-import { Box, Typography, Button, Link } from "@mui/joy";
 import {
-    Link as RouterLink,
     useRouteError,
     isRouteErrorResponse,
 } from "react-router-dom";
+import { Box, Typography, Button } from "@mui/joy";
+
+import { Link } from "@/components/generics/link";
 
 export function ErrorPage() {
     const error = useRouteError();
@@ -41,7 +42,7 @@ export function ErrorPage() {
                     {title}
                 </Typography>
 
-                <Link component={RouterLink} to="/" underline="none">
+                <Link to="/" underline="none">
                     <Button
                         variant="solid"
                         color="neutral"

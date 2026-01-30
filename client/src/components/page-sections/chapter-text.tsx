@@ -11,6 +11,8 @@ export function ChapterText({ children }: ChapterTextProps) {
             level="body-md"
             textAlign="left"
             sx={{
+                mb: 7,
+
                 "&::first-letter": {
                     textTransform: "capitalize",
                     fontSize: "var(--joy-fontSize-xl2)",

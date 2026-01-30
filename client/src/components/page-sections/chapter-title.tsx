@@ -1,7 +1,7 @@
-import { useLocation, Link as RouterLink } from "react-router-dom";
-import { Link } from "@mui/joy";
+import { useLocation } from "react-router-dom";
 
 import { PAGES } from "@/constants/pages";
+import { Link } from "@/components/generics/link";
 
 export function ChapterTitle() {
     const location = useLocation();
@@ -9,14 +9,10 @@ export function ChapterTitle() {
 
     return (
         <Link
-            component={RouterLink}
             to="/"
             typography="h2"
-            underline="hover"
             sx={{
                 display: "inline-block",
-                textDecorationStyle: "solid",
-                textDecorationColor: "currentColor",
                 mb: 8,
             }}
         >

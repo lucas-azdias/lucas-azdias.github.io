@@ -1,7 +1,7 @@
-import { Link as RouterLink } from "react-router-dom";
-import { Box, Link, List, ListItem, Typography } from "@mui/joy";
+import { Box, List, ListItem, Typography } from "@mui/joy";
 
 import { PAGES } from "@/constants/pages";
+import { Link } from "@/components/generics/link";
 
 export function BookSummary() {
     return (
@@ -23,7 +23,6 @@ export function BookSummary() {
                 {PAGES.map(item => (
                     <Link
                         key={item.label}
-                        component={RouterLink}
                         to={item.to}
                         typography="body-md"
                         underline="none"
