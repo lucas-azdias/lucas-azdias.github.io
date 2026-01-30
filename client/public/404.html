@@ -1,0 +1,31 @@
+<!doctype html>
+
+<html lang="pt-br">
+
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8" />
+
+    <!-- Page -->
+    <title>Redirecionando...</title>
+
+    <!-- Redirect script -->
+    <script>
+        // GitHub Pages SPA redirect
+        const path = window.location.pathname;
+        const search = window.location.search;
+        const hash = window.location.hash;
+
+        // Path where site is served
+        const repoBase = "";
+
+        window.location.replace(
+            repoBase + "/?redirect=" +
+            encodeURIComponent(path + search + hash)
+        );
+    </script>
+</head>
+
+<body></body>
+
+</html>

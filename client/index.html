@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html lang="pt-br">
+
+<!-- Based in https://lynnandtonic.com/ and https://fontmeme.com/return-of-the-obra-dinn-font/ -->
+
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Este é o site pessoal de Lucas Dias, um desenvolvedor de Curitiba, Brasil." />
+    <meta name="author" content="Lucas Dias" />
+
+    <!-- Page -->
+    <title>Lucas Dias</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon-light.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon-dark.svg" media="(prefers-color-scheme: dark)">
+
+    <!-- Redirect script -->
+    <script>
+        (function () {
+            const params = new URLSearchParams(window.location.search);
+            const redirect = params.get("redirect");
+
+            if (redirect) {
+                window.history.replaceState(null, "", redirect);
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- App -->
+    <div id="app"></div>
+
+    <!-- React -->
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Analytics -->
+    <script data-goatcounter="https://azdias.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+
+</html>
