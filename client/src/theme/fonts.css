@@ -6,8 +6,8 @@
 @font-face {
     font-family: "Sydonia Atramentiqua";
     src:
-        url("/assets/fonts/Sydonia Atramentiqua Light.woff2") format("woff2"),
-        url("/assets/fonts/Sydonia Atramentiqua Light.woff") format("woff");
+        url("/public/assets/fonts/Sydonia Atramentiqua Light.woff2") format("woff2"),
+        url("/public/assets/fonts/Sydonia Atramentiqua Light.woff") format("woff");
     font-weight: 100;
     font-style: normal;
     font-display: swap;
@@ -17,8 +17,8 @@
 @font-face {
     font-family: "Sydonia Atramentiqua";
     src:
-        url("/assets/fonts/Sydonia Atramentiqua Regular.woff2") format("woff2"),
-        url("/assets/fonts/Sydonia Atramentiqua Regular.woff") format("woff");
+        url("/public/assets/fonts/Sydonia Atramentiqua Regular.woff2") format("woff2"),
+        url("/public/assets/fonts/Sydonia Atramentiqua Regular.woff") format("woff");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -28,8 +28,8 @@
 @font-face {
     font-family: "Sydonia Atramentiqua";
     src:
-        url("/assets/fonts/Sydonia Atramentiqua Italic.woff2") format("woff2"),
-        url("/assets/fonts/Sydonia Atramentiqua Italic.woff") format("woff");
+        url("/public/assets/fonts/Sydonia Atramentiqua Italic.woff2") format("woff2"),
+        url("/public/assets/fonts/Sydonia Atramentiqua Italic.woff") format("woff");
     font-weight: 400;
     font-style: italic;
     font-display: swap;
@@ -39,8 +39,8 @@
 @font-face {
     font-family: "Sydonia Atramentiqua";
     src:
-        url("/assets/fonts/Sydonia Atramentiqua Bold.woff2") format("woff2"),
-        url("/assets/fonts/Sydonia Atramentiqua Bold.woff") format("woff");
+        url("/public/assets/fonts/Sydonia Atramentiqua Bold.woff2") format("woff2"),
+        url("/public/assets/fonts/Sydonia Atramentiqua Bold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -54,7 +54,7 @@
 /* Regular */
 @font-face {
     font-family: "Blackwood Castle";
-    src: url("/assets/fonts/Blackwood Castle.ttf") format("truetype");
+    src: url("/public/assets/fonts/Blackwood Castle.ttf") format("truetype");
     font-style: normal;
     font-display: swap;
 }
@@ -62,7 +62,7 @@
 /* Shadow Variant */
 @font-face {
     font-family: "Blackwood Castle Shadow";
-    src: url("/assets/fonts/Blackwood Castle Shadow.ttf") format("truetype");
+    src: url("/public/assets/fonts/Blackwood Castle Shadow.ttf") format("truetype");
     font-style: normal;
     font-display: swap;
 }
@@ -75,7 +75,7 @@
 /* Regular */
 @font-face {
     font-family: "IM Fell DW Pica";
-    src: url("/assets/fonts/IM Fell DW Pica Regular.ttf") format("truetype");
+    src: url("/public/assets/fonts/IM Fell DW Pica Regular.ttf") format("truetype");
     font-style: normal;
     font-display: swap;
 }
@@ -83,7 +83,7 @@
 /* Italic */
 @font-face {
     font-family: "IM Fell DW Pica";
-    src: url("/assets/fonts/IM Fell DW Pica Italic.ttf") format("truetype");
+    src: url("/public/assets/fonts/IM Fell DW Pica Italic.ttf") format("truetype");
     font-style: italic;
     font-display: swap;
 }
