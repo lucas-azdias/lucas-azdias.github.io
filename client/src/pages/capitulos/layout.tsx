@@ -17,7 +17,7 @@ export default function Layout() {
             <Outlet />
 
             {/* Footer */}
-            <ChapterLinks/>
+            <ChapterLinks />
             <BookSummary />
         </>
     );
