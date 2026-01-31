@@ -9,6 +9,7 @@ export function ChapterText({ children }: ChapterTextProps) {
     return (
         <Typography
             level="body-md"
+            component="div"
             textAlign="left"
             sx={theme => ({
                 mb: 7,

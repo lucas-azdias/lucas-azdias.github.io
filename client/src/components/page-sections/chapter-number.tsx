@@ -11,6 +11,7 @@ export function ChapterNumber() {
     return (
         <Typography
             level="body-lg"
+            component="div"
             textAlign="center"
             sx={{
                 mb: 5,

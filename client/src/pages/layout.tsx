@@ -58,6 +58,7 @@ export default function Layout() {
                 {/* Footer text */}
                 <Typography
                     level="body-sm"
+                    component="div"
                     sx={{
                         paddingTop: 3,
                         marginTop: "auto",
@@ -66,7 +67,7 @@ export default function Layout() {
                     <RomanText
                         value={new Date().getFullYear()}
                     >
-                        <b>v. </b>
+                        <strong>v. </strong>
                     </RomanText>
                 </Typography>
 

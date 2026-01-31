@@ -4,7 +4,10 @@ import { RomanText } from "@/components/generics/roman-text";
 
 export function ChapterHeader() {
     return (
-        <Typography level="body-sm">
+        <Typography
+            level="body-sm"
+            component="div"
+        >
             <Box
                 sx={{
                     display: "flex",
