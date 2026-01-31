@@ -12,7 +12,7 @@ export function Loading({ isFixed = false }: { isFixed?: boolean }) {
                 justifyContent: "center",
                 alignItems: "center",
                 zIndex: 100,
-                bgcolor: `${theme.vars.palette.background.body}`,
+                bgcolor: theme.vars.palette.background.body,
             })}
         >
             <Box

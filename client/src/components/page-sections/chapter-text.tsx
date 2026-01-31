@@ -15,8 +15,8 @@ export function ChapterText({ children }: ChapterTextProps) {
 
                 "&::first-letter": {
                     textTransform: "capitalize",
-                    fontSize: `${theme.vars.fontSize.xl2}`,
-                    fontFamily: `${theme.vars.fontFamily.display}`,
+                    fontSize: theme.vars.fontSize.xl2,
+                    fontFamily: theme.vars.fontFamily.display,
                     lineHeight: 1,
                 },
             })}
