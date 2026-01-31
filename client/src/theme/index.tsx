@@ -42,8 +42,8 @@ export const theme = extendTheme(
                     },
                     text: {
                         primary: "#333319",
-                        secondary: "text.primary",
-                        tertiary: "text.primary",
+                        secondary: "var(--joy-palette-text-primary)",
+                        tertiary: "var(--joy-palette-text-primary)",
                     },
                     neutral: {
                         solidBg: "#B5B9B5",
@@ -59,8 +59,8 @@ export const theme = extendTheme(
                     },
                     text: {
                         primary: "#E5FFFF",
-                        secondary: "text.primary",
-                        tertiary: "text.primary",
+                        secondary: "var(--joy-palette-text-primary)",
+                        tertiary: "var(--joy-palette-text-primary)",
                     },
                     neutral: {
                         solidBg: "#505029",
