@@ -3,7 +3,7 @@ import { Box } from "@mui/joy";
 export function Loading({ isFixed = false }: { isFixed?: boolean }) {
     return (
         <Box
-            sx={{
+            sx={theme => ({
                 position: isFixed ? "fixed" : "relative",
                 inset: isFixed ? 0 : undefined,
                 width: isFixed ? "100vw" : "100%",
@@ -12,8 +12,8 @@ export function Loading({ isFixed = false }: { isFixed?: boolean }) {
                 justifyContent: "center",
                 alignItems: "center",
                 zIndex: 100,
-                bgcolor: "background.body",
-            }}
+                bgcolor: theme.vars.palette.background.body,
+            })}
         >
             <Box
                 sx={{
@@ -26,15 +26,15 @@ export function Loading({ isFixed = false }: { isFixed?: boolean }) {
             >
                 <Box
                     component="span"
-                    sx={{
+                    sx={theme => ({
                         width: 20,
                         height: 20,
                         borderRadius: "50%",
                         border: "3.5px solid",
-                        borderColor: "color-mix(in srgb, var(--joy-palette-neutral-solidBg) 65%, transparent)",
+                        borderColor: `color-mix(in srgb, ${theme.vars.palette.text.primary} 65%, transparent)`,
                         borderBottomColor: "transparent",
                         animation: "spin 0.4s linear infinite",
-                    }}
+                    })}
                 />
             </Box>
 
