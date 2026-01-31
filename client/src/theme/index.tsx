@@ -31,6 +31,8 @@ export const theme = extendTheme(
             h4: { fontWeight: 400 },
         },
         colorSchemes: {
+            // https://lospec.com/palette-list/1bit-monitor-glow
+            // https://lospec.com/palette-list/obra-dinn-macintosh
             light: {
                 palette: {
                     background: {
