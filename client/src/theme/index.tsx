@@ -24,11 +24,12 @@ export const theme = extendTheme(
             sm: "0.85rem",
             xs: "0.60rem",
         },
-        typography: {
-            h1: { fontWeight: 400 },
-            h2: { fontWeight: 400 },
-            h3: { fontWeight: 400 },
-            h4: { fontWeight: 400 },
+        fontWeight: {
+            xl: 400,
+            lg: 400,
+            md: 400,
+            sm: 400,
+            xs: 400,
         },
         colorSchemes: {
             // https://lospec.com/palette-list/1bit-monitor-glow
