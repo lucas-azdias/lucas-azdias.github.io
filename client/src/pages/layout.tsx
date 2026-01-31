@@ -35,7 +35,7 @@ export default function Layout() {
                 })}
             />
             <Box
-                sx={{
+                sx={theme => ({
                     display: "flex",
                     flexDirection: "column",
                     width: 520,
@@ -46,12 +46,12 @@ export default function Layout() {
                     zIndex: 1,
 
                     borderInline: "2px solid",
-                    borderColor: "neutral.outlinedBorder",
+                    borderColor: theme.vars.palette.neutral.solidBg,
                     transition: "border-color ease-out 0.2s",
                     "&:hover": {
-                        borderColor: "neutral.solidBg",
+                        borderColor: theme.vars.palette.text.primary,
                     },
-                }}
+                })}
             >
                 <Outlet />
 

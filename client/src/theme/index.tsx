@@ -29,10 +29,42 @@ export const theme = extendTheme(
             h2: { fontWeight: 400 },
             h3: { fontWeight: 400 },
             h4: { fontWeight: 400 },
-            "body-lg": { color: "var(--joy-palette-text-primary)" },
-            "body-md": { color: "var(--joy-palette-text-primary)" },
-            "body-sm": { color: "var(--joy-palette-text-primary)" },
-            "body-xs": { color: "var(--joy-palette-text-primary)" },
+        },
+        colorSchemes: {
+            light: {
+                palette: {
+                    background: {
+                        surface: "#F0F6F0",
+                        body: "#F0F6F0",
+                    },
+                    text: {
+                        primary: "#333319",
+                        secondary: "text.primary",
+                        tertiary: "text.primary",
+                    },
+                    neutral: {
+                        solidBg: "#B5B9B5",
+                        plainHoverBg: "#E0E5E0",
+                    },
+                },
+            },
+            dark: {
+                palette: {
+                    background: {
+                        surface: "#333319",
+                        body: "#333319",
+                    },
+                    text: {
+                        primary: "#E5FFFF",
+                        secondary: "text.primary",
+                        tertiary: "text.primary",
+                    },
+                    neutral: {
+                        solidBg: "#505029",
+                        plainHoverBg: "#2D2D17",
+                    },
+                },
+            },
         },
     }
 );

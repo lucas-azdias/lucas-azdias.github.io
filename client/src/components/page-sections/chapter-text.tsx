@@ -10,16 +10,16 @@ export function ChapterText({ children }: ChapterTextProps) {
         <Typography
             level="body-md"
             textAlign="left"
-            sx={{
+            sx={theme => ({
                 mb: 7,
 
                 "&::first-letter": {
                     textTransform: "capitalize",
-                    fontSize: "var(--joy-fontSize-xl2)",
-                    fontFamily: "var(--joy-fontFamily-display)",
+                    fontSize: `${theme.vars.fontSize.xl2}`,
+                    fontFamily: `${theme.vars.fontFamily.display}`,
                     lineHeight: 1,
                 },
-            }}
+            })}
         >
             {children}
         </Typography>
