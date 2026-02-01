@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import { Box } from "@mui/joy";
 
 import { BookSummary } from "@/components/page-sections/book-summary";
 import { ChapterHeader } from "@/components/page-sections/chapter-header";
@@ -14,7 +15,9 @@ export default function Layout() {
             <ChapterNumber />
             <ChapterTitle />
 
-            <Outlet />
+            <Box sx={{ mb: 7 }}>
+                <Outlet />
+            </Box>
 
             {/* Footer */}
             <ChapterLinks />
