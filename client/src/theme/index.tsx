@@ -39,9 +39,17 @@ export const theme = extendTheme(
             },
             h2: {
                 letterSpacing: "0.4rem",
+
+                "@media (max-width:500px)": {
+                    letterSpacing: "-0.025rem",
+                },
             },
             h4: {
                 letterSpacing: "0.1rem",
+
+                "@media (max-width:500px)": {
+                    letterSpacing: "-0.025rem",
+                },
             },
         },
         colorSchemes: {

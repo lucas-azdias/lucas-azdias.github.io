@@ -10,7 +10,7 @@
     "type": "module",
     "scripts": {
         "start": "vite dev --port 8080 --host",
-        "build": "yarn lint && vite build",
+        "build": "yarn lint && vite build -m production",
         "preview": "vite preview --port 8080 --host",
         "lock": "yarn --check-files",
         "lint": "tsc -b && eslint .",

@@ -10,14 +10,6 @@
     font-display: swap;
 }
 
-/* Shadow Variant */
-@font-face {
-    font-family: "Blackwood Castle Shadow";
-    src: url("/assets/fonts/Blackwood Castle Shadow.ttf") format("truetype");
-    font-style: normal;
-    font-display: swap;
-}
-
 
 /* ==========================================================================
    IM Fell DW Pica
