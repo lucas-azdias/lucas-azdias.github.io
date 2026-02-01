@@ -19,22 +19,22 @@ export default function Layout() {
             <Box
                 sx={theme => ({
                     position: "fixed",
-                    width: "100dvh",
                     height: "100dvh",
-                    borderRadius: "50%",
-                    background:
-                        theme.palette.mode === "light"
-                            ? "none"
-                            : "radial-gradient(circle, rgba(69, 69, 69, 0.35), transparent 70%)",
-                    filter: "blur(40px)",
-                    top: 0,
-                    left: "50%",
-                    transform: "translateX(-50%)",
+                    inset: 0,
                     zIndex: 0,
                     pointerEvents: "none",
+
+                    backgroundColor: theme.vars.palette.text.primary,
+                    maskImage: "url(/assets/effects/obra-dinn.svg)",
+                    maskSize: "cover",
+                    maskMode: "luminance",
+                    maskRepeat: "repeat-x",
+                    maskPosition: "top right",
+                    // maskPosition: "top center",
+                    // transform: "translateX(-35%)",
                 })}
             />
-            <Box
+            <Sheet
                 sx={theme => ({
                     display: "flex",
                     flexDirection: "column",
@@ -75,7 +75,7 @@ export default function Layout() {
                 <Box sx={{ display: "flex", justifyContent: "center", mt: 1 }}>
                     <ModeToggle size="sm" />
                 </Box>
-            </Box>
+            </Sheet>
         </Sheet>
     );
 }

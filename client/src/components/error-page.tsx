@@ -35,9 +35,9 @@ export function ErrorPage() {
                 }}
             >
                 <Typography
-                    level="h3"
+                    level="h4"
                     textAlign="center"
-                    sx={{ mb: 1.5 }}
+                    sx={{ mb: 6 }}
                 >
                     {title}
                 </Typography>
@@ -46,7 +46,6 @@ export function ErrorPage() {
                     <Button
                         variant="solid"
                         color="neutral"
-                        sx={{ fontWeight: "normal" }}
                     >
                         Página inicial
                     </Button>
