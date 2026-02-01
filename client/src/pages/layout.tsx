@@ -14,6 +14,8 @@ export default function Layout() {
                 justifyContent: "center",
                 minHeight: "100dvh",
                 px: 2,
+
+                overflowX: "hidden",
             }}
         >
             <Box
