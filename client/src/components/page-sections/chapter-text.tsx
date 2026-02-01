@@ -12,8 +12,6 @@ export function ChapterText({ children }: ChapterTextProps) {
             component="div"
             textAlign="left"
             sx={theme => ({
-                mb: 7,
-
                 "&::first-letter": {
                     textTransform: "capitalize",
                     fontSize: theme.vars.fontSize.xl2,
