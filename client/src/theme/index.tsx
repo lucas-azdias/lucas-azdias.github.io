@@ -24,13 +24,29 @@ export const theme = extendTheme(
             sm: "0.85rem",
             xs: "0.60rem",
         },
+        fontWeight: {
+            xl: 400,
+            lg: 400,
+            md: 400,
+            sm: 400,
+            xs: 400,
+        },
         typography: {
-            h1: { fontWeight: 400 },
-            h2: { fontWeight: 400 },
-            h3: { fontWeight: 400 },
-            h4: { fontWeight: 400 },
+            h1: {
+                WebkitTextStroke: "0.083rem var(--joy-palette-text-primary)",
+                color: "var(--joy-palette-background-surface)",
+                textShadow: "0 0.25rem 0 #00000089",
+            },
+            h2: {
+                letterSpacing: "0.4rem",
+            },
+            h4: {
+                letterSpacing: "0.1rem",
+            },
         },
         colorSchemes: {
+            // https://lospec.com/palette-list/1bit-monitor-glow
+            // https://lospec.com/palette-list/obra-dinn-macintosh
             light: {
                 palette: {
                     background: {
@@ -39,8 +55,8 @@ export const theme = extendTheme(
                     },
                     text: {
                         primary: "#333319",
-                        secondary: "text.primary",
-                        tertiary: "text.primary",
+                        secondary: "var(--joy-palette-text-primary)",
+                        tertiary: "var(--joy-palette-text-primary)",
                     },
                     neutral: {
                         solidBg: "#B5B9B5",
@@ -56,8 +72,8 @@ export const theme = extendTheme(
                     },
                     text: {
                         primary: "#E5FFFF",
-                        secondary: "text.primary",
-                        tertiary: "text.primary",
+                        secondary: "var(--joy-palette-text-primary)",
+                        tertiary: "var(--joy-palette-text-primary)",
                     },
                     neutral: {
                         solidBg: "#505029",
