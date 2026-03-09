@@ -24,16 +24,13 @@ export default function Layout() {
                     height: "100dvh",
                     inset: 0,
                     zIndex: 0,
-                    pointerEvents: "none",
 
                     backgroundColor: theme.vars.palette.text.primary,
                     maskImage: "url(/assets/effects/obra-dinn.svg)",
                     maskSize: "cover",
                     maskMode: "luminance",
                     maskRepeat: "repeat-x",
-                    maskPosition: "top right",
-                    // maskPosition: "top center",
-                    // transform: "translateX(-35%)",
+                    maskPosition: "top center", // "top right"
                 })}
             />
             <Sheet
