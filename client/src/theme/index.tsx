@@ -79,7 +79,7 @@ export const theme = extendTheme(
                         body: "#333319",
                     },
                     text: {
-                        primary: "#E5FFFF",
+                        primary: "#F0F6F0",
                         secondary: "var(--joy-palette-text-primary)",
                         tertiary: "var(--joy-palette-text-primary)",
                     },
