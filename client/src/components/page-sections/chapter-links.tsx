@@ -1,5 +1,5 @@
 import { Box } from "@mui/joy";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 import { Link } from "@/components/generics/link";
 
@@ -10,7 +10,7 @@ export function ChapterLinks() {
 
     const iconLinks = [
         { icon: <FaGithub />, to: "https://github.com/lucas-azdias/" },
-        { icon: <FaLinkedin />, to: "https://www.linkedin.com/in/lucas-azdias/" },
+        // { icon: <FaLinkedin />, to: "https://www.linkedin.com/in/lucas-azdias/" },
     ];
 
     return (

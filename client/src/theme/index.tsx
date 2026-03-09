@@ -62,7 +62,7 @@ export const theme = extendTheme(
                         body: "#F0F6F0",
                     },
                     text: {
-                        primary: "#333319",
+                        primary: "#2D3037",
                         secondary: "var(--joy-palette-text-primary)",
                         tertiary: "var(--joy-palette-text-primary)",
                     },
@@ -75,17 +75,17 @@ export const theme = extendTheme(
             dark: {
                 palette: {
                     background: {
-                        surface: "#333319",
-                        body: "#333319",
+                        surface: "#2D3037",
+                        body: "#2D3037",
                     },
                     text: {
-                        primary: "#E5FFFF",
+                        primary: "#F0F6F0",
                         secondary: "var(--joy-palette-text-primary)",
                         tertiary: "var(--joy-palette-text-primary)",
                     },
                     neutral: {
-                        solidBg: "#505029",
-                        plainHoverBg: "#2D2D17",
+                        solidBg: "#484D58",
+                        plainHoverBg: "#191B1F",
                     },
                 },
             },
