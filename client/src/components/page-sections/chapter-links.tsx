@@ -1,14 +1,25 @@
+import { type ReactNode } from "react";
 import { Box } from "@mui/joy";
 import { FaGithub } from "react-icons/fa";
 
 import { Link } from "@/components/generics/link";
 
+interface TextLink {
+    label: string
+    to: string
+}
+
+interface IconLink {
+    icon: ReactNode
+    to: string
+}
+
 export function ChapterLinks() {
-    const textLinks = [
+    const textLinks: TextLink[] = [
         { label: "E-mail", to: "mailto:lucas.azevedodias@outlook.com" },
     ];
 
-    const iconLinks = [
+    const iconLinks: IconLink[] = [
         { icon: <FaGithub />, to: "https://github.com/lucas-azdias/" },
         // { icon: <FaLinkedin />, to: "https://www.linkedin.com/in/lucas-azdias/" },
     ];

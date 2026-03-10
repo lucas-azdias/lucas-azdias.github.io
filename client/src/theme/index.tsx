@@ -34,7 +34,7 @@ export const theme = extendTheme(
         typography: {
             h1: {
                 WebkitTextStroke: "0.083rem var(--joy-palette-text-primary)",
-                color: "var(--joy-palette-background-surface)",
+                color: "var(--joy-palette-background-surface) !important",
                 textShadow: "0 0.25rem 0 #00000089",
             },
             h2: {
@@ -94,6 +94,9 @@ export const theme = extendTheme(
 );
 
 export const globalStyles: GlobalStylesProps<Theme>["styles"] = {
+    "*": {
+        color: "var(--joy-palette-text-primary) !important",
+    },
     html: {
         fontSize: "18px",
     },

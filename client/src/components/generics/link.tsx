@@ -13,6 +13,8 @@ export function Link(
     }: LinkProps
 ) {
     const defaultSx = {
+        display: "flex",
+        color: "currentColor",
         textDecorationStyle: "solid",
         textDecorationColor: "currentColor",
     };
