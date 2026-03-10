@@ -14,7 +14,7 @@ export default function Webpage() {
 
             {/* Subtitle */}
             <Typography level="h4" sx={{ mb: 4 }}>
-                Desenvolvedor
+                Benvenuti
             </Typography>
 
             <BookSummary />
