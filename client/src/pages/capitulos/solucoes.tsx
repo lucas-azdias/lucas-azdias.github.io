@@ -30,21 +30,22 @@ export default function Webpage() {
                     }}
                 >
                     <Link
-                    sx={theme => ({
-                        width: "100%",
-                        padding: 0.5,
+                        sx={theme => ({
+                            width: "100%",
+                            padding: 0.5,
 
-                        border: "2px dashed",
-                        borderColor: theme.vars.palette.text.primary,
+                            border: "2px dashed",
+                            borderColor: theme.vars.palette.text.primary,
 
-                        filter: "saturate(0%)",
+                            filter: "saturate(0%)",
 
-                        transition: "filter ease-in-out 0.15s",
-                        "&:hover": {
-                            filter: "saturate(100%)",
-                        },
-                    })}
-                        to={solution.to}>
+                            transition: "filter ease-in-out 0.15s",
+                            "&:hover": {
+                                filter: "saturate(100%)",
+                            },
+                        })}
+                        to={solution.to}
+                    >
                         <Image height="250px" src={solution.imagePath} alt={solution.title} />
                     </Link>
                     <Box
@@ -63,7 +64,7 @@ export default function Webpage() {
                             level="body-md"
                             to={solution.to}
                         >
-                            {solution.to.replace(/^.*:\/\//, '').replace(/\/.*$/, '')}
+                            {solution.to.replace(/^.*:\/\//, "").replace(/\/.*$/, "")}
                         </Link>
                     </Box>
                 </Box>

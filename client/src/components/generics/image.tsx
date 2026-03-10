@@ -12,7 +12,7 @@ export function Image(
         width = "100%",
         height = "100%",
         src,
-        alt
+        alt,
     }: ImageProps
 ) {
     return (
