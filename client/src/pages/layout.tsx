@@ -26,7 +26,7 @@ export default function Layout() {
                     zIndex: 0,
 
                     backgroundColor: theme.vars.palette.text.primary,
-                    maskImage: "url(/assets/effects/obra-dinn.png)",
+                    maskImage: "url(/assets/effects/obra-dinn.svg)",
                     maskSize: "cover",
                     maskMode: "luminance",
                     maskRepeat: "repeat-x",
