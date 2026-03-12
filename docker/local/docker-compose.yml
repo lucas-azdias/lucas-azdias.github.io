@@ -2,7 +2,7 @@
 # INSTRUÇÕES PARA USO LOCAL
 
 # Inicie o container e entre no modo interativo:
-# $ docker compose up -d; docker compose exec nodejs sh
+# $ docker compose up --profile develop -d; docker compose exec nodejs sh
 
 
 # Parar e remover container após uso:
@@ -10,6 +10,7 @@
 # -----------------------------------
 
 services:
+
     nodejs:
         image: docker.io/node:22-alpine
         container_name: nodejs
@@ -21,3 +22,5 @@ services:
             - CHOKIDAR_USEPOLLING=true
         ports:
             - 8080:8080
+        profiles:
+            - develop
