@@ -2,7 +2,7 @@
 # INSTRUÇÕES PARA USO LOCAL
 
 # Inicie o container e entre no modo interativo:
-# $ docker compose up --profile develop -d; docker compose exec nodejs sh
+# $ docker compose --profile develop up -d; docker compose exec nodejs sh
 
 
 # Parar e remover container após uso:
