@@ -37,11 +37,19 @@ export default function Webpage() {
                             border: "2px dashed",
                             borderColor: theme.vars.palette.text.primary,
 
-                            filter: "saturate(0%)",
+                            filter: "saturate(50%)",
 
-                            transition: "filter ease-in-out 0.15s",
+                            transition: "filter ease-in-out 0.15s, box-shadow 0.2s ease",
                             "&:hover": {
                                 filter: "saturate(100%)",
+                                boxShadow: `0 0 20px ${theme.vars.palette.neutral.solidBg}`,
+                            },
+
+                            "& img": {
+                                transition: "transform 0.25s ease",
+                            },
+                            "&:hover img": {
+                                transform: "scale(1.05)",
                             },
                         })}
                         to={solution.to}
