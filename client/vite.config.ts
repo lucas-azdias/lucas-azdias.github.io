@@ -1,43 +1,43 @@
 import path from "path";
-import react from "@vitejs/plugin-react";
+import react from "@vitejs/plugin-react-swc";
 import svgr from "vite-plugin-svgr";
 import { visualizer } from "rollup-plugin-visualizer";
-import { type UserConfig } from "vite";
+import { type UserConfig, type ConfigEnv } from "vite";
 
-export default {
-    base: "/",
-    resolve: {
-        alias: {
-            "@": path.resolve(__dirname, "./src"),
-            "!": path.resolve(__dirname, "."),
+export default ({ mode }: ConfigEnv): UserConfig => (
+    {
+        base: "/",
+        resolve: {
+            alias: {
+                "@": path.resolve(__dirname, "./src"),
+                "!": path.resolve(__dirname, "."),
+            },
         },
-    },
-    plugins: [
-        react(
-            {
-                babel: {
-                    presets: [
-                        [
-                            "@babel/preset-typescript",
-                            {
-                                onlyRemoveTypeImports: true,
-                            },
-                        ],
-                        [
-                            "@babel/preset-react",
-                            {
-                                runtime: "automatic",
-                            },
-                        ],
-                    ],
-                },
-            }
-        ),
-        svgr(
-            {
-                include: "**/*.svg?react",
-            }
-        ),
-        visualizer(),
-    ],
-} satisfies UserConfig;
+        plugins: [
+            react(),
+            svgr(
+                {
+                    include: "**/*.svg?react",
+                }
+            ),
+            ...(mode === "analyze" ? [visualizer()] : []),
+        ],
+        optimizeDeps: {
+            include: [
+                "react",
+                "react-dom",
+                "@mui/joy",
+            ]
+        },
+        server: {
+            watch: {
+                ignored: [
+                    "**/dist/**",
+                    "**/.git/**",
+                    "**/node_modules/**",
+                    "**/.pnpm-store/**",
+                ],
+            },
+        },
+    } satisfies UserConfig
+);
