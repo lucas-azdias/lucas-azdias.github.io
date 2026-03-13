@@ -17,7 +17,12 @@ services:
         volumes:
             - ../../client:/client
         working_dir: /client
-        command: sh -c "tail -f /dev/null"
+        command: >
+            sh -c "
+                corepack enable &&
+                corepack prepare pnpm@latest --activate &&
+                tail -f /dev/null
+            "
         environment:
             - CHOKIDAR_USEPOLLING=true
         ports:
