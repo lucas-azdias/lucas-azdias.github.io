@@ -21,6 +21,7 @@ services:
             sh -c "
                 corepack enable &&
                 corepack prepare pnpm@latest --activate &&
+                pnpm config set node-linker hoisted &&
                 tail -f /dev/null
             "
         environment:
