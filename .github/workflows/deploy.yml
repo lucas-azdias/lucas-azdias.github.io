@@ -3,7 +3,7 @@ name: Deploy on GitHub Pages
 on:
     workflow_run:
         workflows:
-            -   Basic commit test
+            -   Commit test
         types:
             -   completed
 
@@ -19,27 +19,31 @@ jobs:
             github.event.workflow_run.head_branch == 'main'
 
         runs-on: ubuntu-latest
+
+        defaults:
+            run:
+                working-directory: client
+
         steps:
             -   name: Checkout files
                 uses: actions/checkout@v4
                 with:
                     sparse-checkout: client
                     sparse-checkout-cone-mode: true
-                    path: .
 
-            -   name: Move `client` folder files to `root`
-                run: |
-                    mv client/* .
-                    rm -rf client
+            -   name: Setup `pnpm`
+                uses: pnpm/action-setup@v4
+                with:
+                    version: 10
 
-            -   name: Setup Node.js
+            -   name: Setup `node.js`
                 uses: actions/setup-node@v4
                 with:
                     node-version: 22
-                    cache: yarn
+                    cache: pnpm
 
             -   name: Install dependencies
-                run: yarn install
+                run: pnpm lock
 
             -   name: Build project
                 run: yarn build
@@ -47,7 +51,7 @@ jobs:
             -   name: Upload artifact to GitHub Pages
                 uses: actions/upload-pages-artifact@v4
                 with:
-                    path: dist/
+                    path: client/dist
 
     deploy:
         needs: build
@@ -57,6 +61,8 @@ jobs:
             url: ${{ steps.deployment.outputs.page_url }}
 
         runs-on: ubuntu-latest
+
         steps:
             -   name: Deploy to GitHub Pages
+                id: deployment
                 uses: actions/deploy-pages@v4

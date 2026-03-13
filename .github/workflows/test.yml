@@ -1,34 +1,44 @@
-name: Basic commit test
+name: Commit test
 
 on:
     push:
         branches:
-        -   '**'
+            - "**"
 
 jobs:
     test:
         runs-on: ubuntu-latest
+
+        defaults:
+            run:
+                working-directory: client
+
         steps:
             -   name: Checkout files
                 uses: actions/checkout@v4
                 with:
                     sparse-checkout: client
                     sparse-checkout-cone-mode: true
-                    path: .
 
-            -   name: Move `client` folder files to `root`
-                run: |
-                    mv client/* .
-                    rm -rf client
+            -   name: Setup `pnpm`
+                uses: pnpm/action-setup@v4
+                with:
+                    version: 10
 
-            -   name: Setup Node.js
+            -   name: Setup `node.js`
                 uses: actions/setup-node@v4
                 with:
                     node-version: 22
-                    cache: yarn
+                    cache: pnpm
 
             -   name: Install dependencies
-                run: yarn install
+                run: pnpm lock
+
+            -   name: Audit dependencies
+                run: pnpm audit
 
             -   name: Run linter
-                run: yarn lint
+                run: pnpm lint
+
+            -   name: Run tests
+                run: pnpm test

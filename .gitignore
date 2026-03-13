@@ -1,5 +1,6 @@
 # Node.js & Build Artifacts
 **/node_modules/
+**/.pnpm-store/
 **/dist/
 **/.vite/
 **/src/generated/prisma/
