@@ -32,11 +32,6 @@ export const theme = extendTheme(
             xs: 400,
         },
         typography: {
-            h1: {
-                WebkitTextStroke: "0.083rem var(--joy-palette-text-primary)",
-                color: "var(--joy-palette-background-surface) !important",
-                textShadow: "0 0.25rem 0 #00000089",
-            },
             h2: {
                 letterSpacing: "0.4rem",
 
@@ -67,8 +62,9 @@ export const theme = extendTheme(
                         tertiary: "var(--joy-palette-text-primary)",
                     },
                     neutral: {
-                        solidBg: "#B5B9B5",
-                        plainHoverBg: "#E0E5E0",
+                        solidBg: "#525763",
+                        plainHoverBg: "#2D303728",
+                        plainActiveBg: "#2D303756",
                     },
                 },
             },
@@ -84,8 +80,9 @@ export const theme = extendTheme(
                         tertiary: "var(--joy-palette-text-primary)",
                     },
                     neutral: {
-                        solidBg: "#484D58",
-                        plainHoverBg: "#191B1F",
+                        solidBg: "#9EA09E",
+                        plainHoverBg: "#F0F6F028",
+                        plainActiveBg: "#F0F6F056",
                     },
                 },
             },
