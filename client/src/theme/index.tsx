@@ -3,7 +3,7 @@ import { type GlobalStylesProps } from "@mui/system";
 
 import "@/theme/fonts.css";
 
-type Mode = 'light' | 'dark' | 'system';
+type Mode = "light" | "dark" | "system";
 
 export const defaultMode: Mode = "system";
 
