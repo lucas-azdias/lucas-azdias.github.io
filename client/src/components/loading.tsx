@@ -1,18 +1,34 @@
 import { Box } from "@mui/joy";
 
-export function Loading({ isFixed = false }: { isFixed?: boolean }) {
+import { usePageLevel } from "@/components/page-level-provider";
+
+export function Loading(
+    {
+        isFixed = undefined,
+        isFilled = undefined,
+    }: {
+        isFixed?: boolean | undefined,
+        isFilled?: boolean | undefined,
+    }
+) {
+    const level = usePageLevel();
+    const isRoot = level === 0;
+
     return (
         <Box
             sx={theme => ({
-                position: isFixed ? "fixed" : "relative",
-                inset: isFixed ? 0 : undefined,
-                width: isFixed ? "100vw" : "100%",
-                height: isFixed ? "100vh" : "100%",
+                position: isFixed ?? isRoot ? "fixed" : "relative",
+                inset: isFixed ?? isRoot ? 0 : undefined,
+                width: isFixed ?? isRoot ? "100dvw" : "100%",
+                height: isFixed ?? isRoot ? "100dvh" : "100%",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
                 zIndex: 100,
-                bgcolor: theme.vars.palette.background.body,
+                backgroundColor: 
+                    isFilled ?? isRoot
+                    ? theme.vars.palette.background.body
+                    : "transparent",
             })}
         >
             <Box

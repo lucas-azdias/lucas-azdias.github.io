@@ -3,6 +3,7 @@ import { createBrowserRouter, type RouteObject } from "react-router-dom";
 
 import { Loading } from "@/components/loading";
 import { ErrorPage } from "@/components/error-page";
+import { PageLevelProvider } from "@/components/page-level-provider";
 
 // Type for the path tree structure
 interface PagePathNode {
@@ -18,12 +19,14 @@ const pagePaths = import.meta.glob("@/pages/**/*.tsx");
 // Base structure of the path tree
 const pagePathsTree: PagePathNode = { path: "", children: [] };
 
-// Helper function for lazy-load + Suspense wrapper
+// Helper function for lazy-load and suspense wrapper
 function lazyElement(importer: () => Promise<{ default: React.ComponentType }>): JSX.Element {
     const Element = lazy(importer);
     return (
-        <Suspense fallback={<Loading isFixed={true} />}>
-            <Element />
+        <Suspense fallback={<Loading />}>
+            <PageLevelProvider>
+                <Element />
+            </PageLevelProvider>
         </Suspense>
     );
 }

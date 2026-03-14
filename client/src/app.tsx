@@ -13,7 +13,7 @@ function App() {
             <GlobalStyles
                 styles={globalStyles}
             />
-            <Suspense fallback={<Loading isFixed={true} />}>
+            <Suspense fallback={<Loading isFixed isFilled />}>
                 <RouterProvider router={router} />
             </Suspense>
         </CssVarsProvider>
