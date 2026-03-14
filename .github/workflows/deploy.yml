@@ -41,12 +41,13 @@ jobs:
                 with:
                     node-version: 22
                     cache: pnpm
+                    cache-dependency-path: client
 
             -   name: Install dependencies
                 run: pnpm lock
 
             -   name: Build project
-                run: yarn build
+                run: pnpm build
 
             -   name: Upload artifact to GitHub Pages
                 uses: actions/upload-pages-artifact@v4
