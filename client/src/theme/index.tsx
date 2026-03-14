@@ -1,8 +1,9 @@
 import { extendTheme, type Theme } from "@mui/joy";
 import { type GlobalStylesProps } from "@mui/system";
-import { type Mode } from "@mui/system/cssVars/useCurrentColorScheme";
 
 import "@/theme/fonts.css";
+
+type Mode = 'light' | 'dark' | 'system';
 
 export const defaultMode: Mode = "system";
 
