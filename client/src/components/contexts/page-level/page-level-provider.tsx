@@ -1,10 +1,5 @@
-import { createContext, useContext } from "react";
-
-const PageLevelContext = createContext(0);
-
-export function usePageLevel() {
-    return useContext(PageLevelContext);
-}
+import { usePageLevel } from "@/components/contexts/page-level/use-page-level";
+import { PageLevelContext } from "@/components/contexts/page-level/page-level-context";
 
 export function PageLevelProvider(
     {

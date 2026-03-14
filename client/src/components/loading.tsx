@@ -1,6 +1,6 @@
 import { Box } from "@mui/joy";
 
-import { usePageLevel } from "@/components/page-level-provider";
+import { usePageLevel } from "@/components/contexts/page-level/use-page-level";
 
 export function Loading(
     {

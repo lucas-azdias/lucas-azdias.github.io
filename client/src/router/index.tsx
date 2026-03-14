@@ -3,7 +3,7 @@ import { createBrowserRouter, type RouteObject } from "react-router-dom";
 
 import { Loading } from "@/components/loading";
 import { ErrorPage } from "@/components/error-page";
-import { PageLevelProvider } from "@/components/page-level-provider";
+import { PageLevelProvider } from "@/components/contexts/page-level/page-level-provider";
 
 // Type for the path tree structure
 interface PagePathNode {
