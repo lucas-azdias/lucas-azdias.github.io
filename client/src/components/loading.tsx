@@ -4,11 +4,11 @@ import { usePageLevel } from "@/components/page-level-provider";
 
 export function Loading(
     {
-        isFixed = undefined,
-        isFilled = undefined,
+        isFixed,
+        isFilled,
     }: {
-        isFixed?: boolean | undefined,
-        isFilled?: boolean | undefined,
+        isFixed?: boolean | undefined
+        isFilled?: boolean | undefined
     }
 ) {
     const level = usePageLevel();
@@ -25,10 +25,10 @@ export function Loading(
                 justifyContent: "center",
                 alignItems: "center",
                 zIndex: 100,
-                backgroundColor: 
+                backgroundColor:
                     isFilled ?? isRoot
-                    ? theme.vars.palette.background.body
-                    : "transparent",
+                        ? theme.vars.palette.background.body
+                        : "transparent",
             })}
         >
             <Box

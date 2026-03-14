@@ -8,7 +8,7 @@ export function usePageLevel() {
 
 export function PageLevelProvider(
     {
-        children
+        children,
     }: {
         children: React.ReactNode
     }

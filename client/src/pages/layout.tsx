@@ -32,9 +32,9 @@ export default function Layout() {
                             ${alpha(theme.palette.background.surface, 0.5)}
                         ),
                         url("${theme.palette.mode === "light"
-                            ? "assets/images/ars et opera/John Constable - Wivenhoe Park.jpg"
-                            : "assets/images/ars et opera/John Martin - Joshua Commanding the Sun to Stand Still.jpg"
-                        }")
+                        ? "assets/images/ars et opera/John Constable - Wivenhoe Park.jpg"
+                        : "assets/images/ars et opera/John Martin - Joshua Commanding the Sun to Stand Still.jpg"
+                    }")
                         `,
                     backgroundSize: "cover",
                     backgroundPosition: "center",

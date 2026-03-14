@@ -27,7 +27,7 @@ export default ({ mode }: ConfigEnv): UserConfig => (
                 "react",
                 "react-dom",
                 "@mui/joy",
-            ]
+            ],
         },
         server: {
             watch: {
